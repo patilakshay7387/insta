@@ -83,9 +83,9 @@ input[type=text]:focus {
   }
 .container {
 	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
+	// border-radius: 10px;
+  	// box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+	// 		0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -152,9 +152,9 @@ input[type=text]:focus {
 }
 
 .overlay {
-	background: #156b6a;
-	background: -webkit-linear-gradient(to right, #156b6a, #289e9c);
-	background: linear-gradient(to right, #156b6a, #2e9c9a);
+	background: rgb(21, 107, 106);
+	// background: -webkit-linear-gradient(to right, #156b6a, #289e9c);
+	// background: linear-gradient(to right, #156b6a, #2e9c9a);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
