@@ -5,11 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.component';
+import { HomeComponent } from './pages/home/home.component';
+// import { PlansComponent } from './pages/plans/plans.component';
+// import { HeaderComponent } from './shared/header/header.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
+  
+    // HomeComponent,
     // SigninComponent,
     // RegisterComponent,
   ],

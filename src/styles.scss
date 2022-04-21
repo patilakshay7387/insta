@@ -1,244 +1,261 @@
 /* You can add global styles to this file, and also import other style files */
 $mt-100: 100px;
 
+h1{
+	font-family: sans-serif;
+    font-weight: 800 !important;
+}
+h2{
+	font-weight: 700 !important;
+	font-family: sans-serif;
+}
+p{
+	font-family: sans-serif;
+}
 .signin{
     margin-top: $mt-100;
 }
 
-// h1 {
-// 	font-weight: bold;
-// 	margin: 0;
-//     text-align: left !important;
-// }
-
-// h2 {
-// 	text-align: left !important;
-// }
-
-p {
-	font-size: 14px;
-	font-weight: 100;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
+// Header start
+.navbar-brand{
+	font-size: 24px;
+    font-weight: 700;
+    padding-right: 15px;
+	color: black;
+}
+.signin-btn {
+	// background-color: #1cb2e8;
+	background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  100%, #77A1D3  100%);
+    color: white !important;
+    padding: 7px 25px 7px 25px !important;
 }
 
-span {
-	font-size: 12px;
-}
-
-a {
-	color: #333;
+.get-btn {
+	display: block;
+	// background-color: #1cb2e8;
+	background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  100%, #77A1D3  100%);
+    color: white !important;
+    padding: 7px 25px 7px 25px !important;
+	width: 60%;
+    text-align: center;
+    font-weight: 700;
 	font-size: 14px;
 	text-decoration: none;
-	margin: 15px 0;
 }
 
-button {
-	border-radius: 20px;
-	border: 1px solid #156b6a;
-	background-color: #156b6a;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+
+
+
+.navbar{
+	background-color: #f2f2f2 !important;
+	padding-left: 60px;
+    padding-right: 60px;
+	padding-top: 1rem !important;
+}
+.nav-item a{
+	font-weight: 600;
+	font-size: 15px;
+	color: black;
+}
+.navbar-brand img{
+	width: 23%;
+}
+// Haeder end
+
+
+
+/*Home component*/
+
+.d-block {
+    // display: block!important;
+    margin: auto ;
+}
+.carousel{
+	padding: 110px;
+	padding-left: 70px;
+	padding-right: 70px;
+	background-color: #f2f2f2;
+
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow:visible !important; 
+}
+.carousel-inner h1{
+	margin-bottom: 25px;
+}
+.content{
+	background-color: #ffbc58;
+}
+.bg-block{
+	padding-left: 0px!important;
+	margin-top: 0px;
 }
 
-button:active {
-	transform: scale(0.95);
+.router{
+	width: 52%;
+    display: block;
+    transform: scaleX(-1);
+    margin: auto;
+    margin-top: -20px;
+    margin-left: 304px;
 }
+/*Home component end*/
 
-button:focus {
-	outline: none;
-}
+// logo slider
 
-button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
-}
 
-form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	// text-align: center;
-}
+  
+  .container {
+	overflow: hidden;
 
-input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0 !important;
-	width: 100%;
-}
-input[type=text]:focus {
-   border: none;
+
+
+	.slider {
+	  animation: slidein 30s linear infinite;
+	  white-space: nowrap;
+	  background-color: #f2f2f2;
+	  margin-top: 80px;
+	  .logos {
+		width: 100%;
+		display: inline-block;
+		margin: 0px 0;
+		.fab {
+		color: #aba6a6 !important;
+		  width: calc(100% / 5);
+		  animation: fade-in 0.5s 
+			cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+		}
+	  }
+	}
   }
-.container {
-	background-color: #fff;
-	// border-radius: 10px;
-  	// box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-	// 		0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
-	overflow: hidden;
-	width: 768px;
-	max-width: 100%;
-	min-height: 480px;
+.brandslider{
+	background-color: #f2f2f2 !important;
 }
-
-.form-container {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	transition: all 0.6s ease-in-out;
-}
-
-.sign-in-container {
-	left: 0;
-	width: 50%;
-	z-index: 2;
-}
-
-.container.right-panel-active .sign-in-container {
-	transform: translateX(100%);
-}
-
-.sign-up-container {
-	left: 0;
-	width: 50%;
-	opacity: 0;
-	z-index: 1;
-}
-
-.container.right-panel-active .sign-up-container {
-	transform: translateX(100%);
-	opacity: 1;
-	z-index: 5;
-	animation: show 0.6s;
-}
-
-@keyframes show {
-	0%, 49.99% {
-		opacity: 0;
-		z-index: 1;
+//   @keyframes slidein {
+// 	from {
+// 	  transform: translate3d(0, 0, 0);
+// 	}
+// 	to {
+// 	  transform: translate3d(-100%, 0, 0);
+// 	}
+//   }
+  
+  @keyframes fade-in {
+	0% {
+	  opacity: 0;
 	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+
+// logo slider end
+// map section
+.d-map{
+	display:block;
+	vertical-align: middle;
+	width: 100%;
+	margin-left: 50px;
+}
+.mapsection{
+	margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px 0px 25px 0px;
+}
+.mapbtn{
+	background-image: linear-gradient(to right, #ed8d21 0%, #f3cda1 100%, #77A1D3 100%) !important; 
+}
+// map end
+
+
+
+// Plans component
+
+.plans-slider{
+	background-color: #f2f2f2;
+	padding: 70px;
+	padding-left: 40px;
+	padding-right: 40px;
 	
-	50%, 100% {
-		opacity: 1;
-		z-index: 5;
+	select{
+		margin-top: 20px;
+    	width: 50%;
+		box-shadow: 8px 4px 15px -8px rgb(0 0 0 / 34%);
+		border: 0px solid rgba(0, 0, 0, 0.125) !important;
+		border-radius: 6px !important;
+		padding: 5px;
+		
+	
+	
+	}
+	.planheader-con{
+		left: 20px;
+		margin-left: 90px;
 	}
 }
-
-.overlay-container {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-	z-index: 100;
+.plans-slider h3{
+	font-weight: 700;
 }
-
-.container.right-panel-active .overlay-container{
-	transform: translateX(-100%);
+.plans-slider .arrow{
+	width: 3%;
+    position: absolute;
+    right: 39%;
+    top: 30%;
+    transform: scaleX(-1);
+    transform: rotate(54deg) scaleX(-1);
 }
-
-.overlay {
-	background: rgb(21, 107, 106);
-	// background: -webkit-linear-gradient(to right, #156b6a, #289e9c);
-	// background: linear-gradient(to right, #156b6a, #2e9c9a);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	color: #FFFFFF;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-  	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
+.plans-slider .carddeck{
+	margin-top: 70px;
+	margin-bottom: 20px;
 }
-
-.container.right-panel-active .overlay {
-  	transform: translateX(50%);
-}
-
-.overlay-panel {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
-}
-
-.overlay-left {
-	transform: translateX(-20%);
-}
-
-.container.right-panel-active .overlay-left {
-	transform: translateX(0);
-}
-
-.overlay-right {
-	right: 0;
-	transform: translateX(0);
-}
-
-.container.right-panel-active .overlay-right {
-	transform: translateX(20%);
-}
-
-.social-container {
-	margin: 20px 0;
-}
-
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 1.1rem 2rem !important;
+    color: #000000;
     text-decoration: none;
+    background-color: #fff;
+    border: 0px solid rgba(0,0,0,.125) !important;
+	border-radius: 15px !important;
+	text-align: center;
+
 }
+.card{
+	-webkit-box-shadow: 8px 9px 37px -20px rgb(0 0 0 / 34%);
+	-moz-box-shadow: 8px 9px 37px -20px rgb(0 0 0 / 34%);
+	box-shadow: 8px 9px 37px -20px rgb(0 0 0 / 34%);
+	border: 0px solid rgba(0,0,0,.125) !important;
+	border-radius: 15px !important;
+	padding: 20px;
+	text-align: center;
+	ul > :first-child {
+		font-weight: 900 !important;
+	  }
+}
+.card2{
+	width: 18rem !important;
+    padding: 27px !important;
+    background-color: #436f95!important;
+    margin-top: -19px !important;
+
+	.list-group-item {
+		background-color: #436f95 !important;
+		color: white;
+		font-weight: 400;
+		text-align: center;
+		
+	
+  }
+  .card-footer p{
+	text-align: center;
+	color: white !important;
+}
+}
+.card-footer{
+	background-color:transparent !important;
+}
+
+// plans compoenet end

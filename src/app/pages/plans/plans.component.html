@@ -1,0 +1,95 @@
+<app-header></app-header>
+
+<div class="plans-slider">
+    <div class="container-fluid">
+        <div class="header">
+            <div class="row">
+                <div class="col-lg-4">
+                  <select placeholder="Country">
+                    <option>--Choose Country--</option>
+                    <option *ngFor="let country of Countries" [value]="country">{{country.name}}</option>
+                  </select>
+
+                  <select #cricket (change)="update($event)">
+                    <option value="default">----</option>
+                    <option *ngFor="let player of players" [ngValue]="player">
+                        {{player}}
+                    </option>
+                </select>
+
+                <select id='peeps' name='people' [(ngModel)]="peepsSelect">
+                  <option *ngFor="let item of data" [value]="item.name">
+                    {{item.name}}
+                  </option>    
+              </select>
+
+              <select [(ngModel)]="selectedd">
+                <option *ngFor="let person of people" [ngValue]="person">{{person.name}}</option>
+              </select>
+                </div>
+                <div class="col-lg-8">
+                    <div class="planheader-con">
+                        <h3>OUR BEST PLANS</h3>
+                        <h5>Broadband Plans In Pune</h5>
+                        <img class="arrow" src="../assets/arrow.png" alt="" srcset="">
+                    </div>
+               
+                </div>
+            </div>          
+        </div>
+
+        <div class="carddeck">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">YOU UNLIMITED 200***</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-footer">
+                          Card footer
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card card2" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">YOU UNLIMITED 270***</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-footer">
+                            <p>cardf</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">YOU UNLIMITED 300***</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-footer">
+                          Card footer
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">YOU UNLIMITED 370***</li>
+                          <li class="list-group-item">A second item</li>
+                          <li class="list-group-item">A third item</li>
+                        </ul>
+                        <div class="card-footer">
+                          Card footer
+                        
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
